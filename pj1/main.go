@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	_ "strings"
 
 	"example.local/pj1/pj1/math"
 	// "example.local/pj1/pj1/math/stats"
