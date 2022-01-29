@@ -1,5 +1,6 @@
 package math
 
+// This is a comment.
 const Pi = 3.14159
 
 func Add(x, y int) int {
