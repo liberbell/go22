@@ -15,5 +15,6 @@ func main() {
 	fmt.Println(m.Add(10, 20))
 	// fmt.Println(math.Avg(vals))
 	fmt.Println(math.Pi)
+	fmt.Println(m.Pi)
 	fmt.Fprintln(os.Stdout, "Hello")
 }
