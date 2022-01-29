@@ -9,7 +9,11 @@ func init() {
 }
 
 func init() {
+	fmt.Println("Database initialized and ready.")
+}
 
+func init() {
+	env = "development"
 }
 
 func main() {
