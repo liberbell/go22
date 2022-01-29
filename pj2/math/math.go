@@ -6,6 +6,6 @@ func Add(x, y int) int {
 	return x + y
 }
 
-func main() {
-
+func Sub(x, y int) int {
+	return x - y
 }
