@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	_ "example.local/pj2/math"
+)
 
 var env string
 
