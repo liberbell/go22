@@ -17,4 +17,5 @@ func main() {
 	go myFunc(("Goroutine2"))
 	time.Sleep(100 * time.Millisecond)
 	fmt.Println("finished")
+	// fmt.Println()
 }
