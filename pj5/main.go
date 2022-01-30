@@ -7,3 +7,7 @@ func main() {
 	go g1()
 	fmt.Println("exited main routine.")
 }
+
+func g1() {
+	fmt.Println("running in gorouting g1.")
+}
