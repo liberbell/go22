@@ -3,14 +3,13 @@ package main
 import (
 	"fmt"
 
-	_ "example.local/pj2/math"
-	_ "example.local/pj2/math/stats"
+	_ "github.com/rccsdevops/calc/math/stats"
 )
 
 var env string
 
 func init() {
-	fmt.Println("Secret key from package main fetched.")
+	env = "demo"
 }
 
 func init() {
