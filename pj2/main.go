@@ -17,5 +17,5 @@ func init() {
 }
 
 func main() {
-	aa
+	fmt.Println(env + " environment loaded.")
 }
