@@ -17,10 +17,6 @@ func init() {
 	fmt.Println("Database initialized and ready.")
 }
 
-func init() {
-	env = "development"
-}
-
 func main() {
 	fmt.Println(env + " environment loaded.")
 }
