@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	_ "github.com/rccsdevops/calc/math"
+	m "github.com/rccsdevops/calc/math"
 	_ "github.com/rccsdevops/calc/math/stats"
 )
 
@@ -19,4 +19,5 @@ func init() {
 
 func main() {
 	fmt.Println(env + " environment loaded.")
+	fmt.Println(m.Add(1, 1))
 }
