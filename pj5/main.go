@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	fmt.Println("runnning main routine.")
 	go g1()
+	time.Sleep(10 * time.Millisecond)
 	fmt.Println("exited main routine.")
 }
 
