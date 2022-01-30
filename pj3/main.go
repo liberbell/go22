@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	_ "github.com/rccsdevops/calc/math"
 	_ "github.com/rccsdevops/calc/math/stats"
 )
 
