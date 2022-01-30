@@ -9,5 +9,7 @@ func myFunc(step string) {
 }
 
 func main() {
-	myFunc
+	myFunc("synchronous")
+	go myFunc("G1")
+	go myFunc(("Goroutine2"))
 }
