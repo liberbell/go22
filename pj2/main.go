@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	_ "example.local/pj2/math"
+	_ "example.local/pj2/math/stats"
 )
 
 var env string
