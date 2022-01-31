@@ -10,6 +10,10 @@ func main() {
 	fmt.Println("x is of type: ", reflect.TypeOf(x))
 }
 
-func inc() {
-
+func inc() func() int {
+	var j int
+	return func() int {
+		j++
+		return j
+	}
 }
