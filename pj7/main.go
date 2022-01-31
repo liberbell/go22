@@ -7,9 +7,10 @@ import (
 
 func main() {
 	for i := 0; i < 5; i++ {
-		go func(i int) {
+		f := func(i int) {
 			fmt.Println("i = ", i)
-		}(i)
+		}
+		go f(i)
 	}
 	time.Sleep(10 * time.Millisecond)
 }
