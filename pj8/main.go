@@ -10,6 +10,7 @@ func main() {
 		go myfunc(i)
 	}
 	time.Sleep(10 * time.Millisecond)
+	fmt.Println(("Each goroutine has run to competion, thanks for waiting."))
 }
 
 func myfunc(i int) {
