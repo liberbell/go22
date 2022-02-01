@@ -10,8 +10,18 @@ import (
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
-	var counter uint64
+	var counter int
 	var wg sync.WaitGroup
+
+	inc := func() {
+		counter++
+		fmt.Println("increment counter = ", counter)
+	}
+
+	dec := func() {
+		counter--
+		fmt.Println("decrement counter = ", counter)
+	}
 
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
