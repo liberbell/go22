@@ -17,5 +17,6 @@ func main() {
 }
 
 func myfunc(wg *sync.WaitGroup, i int) {
+	defer wg.Done()
 	fmt.Println("Finished executing iteration.", i)
 }
