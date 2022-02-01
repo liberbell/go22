@@ -9,12 +9,13 @@ func main() {
 	var wg sync.WaitGroup
 
 	for i := 1; i < 5; i++ {
-		go myfunc(i)
+		wg.Add(1)
+		go myfunc(&wg, i)
 	}
-
+	wg.Wait()
 	fmt.Println(("Each goroutine has run to competion, thanks for waiting."))
 }
 
-func myfunc(i int) {
+func myfunc(wg *sync.WaitGroup, i int) {
 	fmt.Println("Finished executing iteration.", i)
 }
