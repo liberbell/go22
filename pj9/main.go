@@ -10,7 +10,7 @@ import (
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
-	var counter uint16
+	var counter uint64
 	var wg sync.WaitGroup
 
 	for i := 0; i < 1000; i++ {
