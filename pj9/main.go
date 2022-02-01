@@ -20,7 +20,7 @@ func main() {
 				counter++
 			}
 		}()
-		wg.Wait()
-		fmt.Println("counter: ", counter)
 	}
+	wg.Wait()
+	fmt.Println("counter: ", counter)
 }
