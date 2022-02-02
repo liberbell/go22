@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"runtime"
 	"sync"
 )
@@ -17,9 +18,19 @@ func main() {
 		}
 	}
 
-	dec := func() {
-		for i := 0; i < 1000; i++ {
-			counter--
-		}
+	// dec := func() {
+	// 	for i := 0; i < 1000; i++ {
+	// 		counter--
+	// 	}
+	// }
+
+	for i := 0; i < 1000; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			inc()
+		}()
 	}
+	wg.Wait()
+	fmt.Println("counter: ", counter)
 }
