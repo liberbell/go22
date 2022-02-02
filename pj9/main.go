@@ -29,6 +29,14 @@ func main() {
 			inc()
 		}()
 	}
+
+	for i := 0; i < 1000; i++ {
+		wg.Add(1)
+		go func()  {
+			defer wg.Done()
+			dec()
+		}
+	}
 	wg.Wait()
-	fmt.Println("counter: ", counter)
+	fmt.Println("final value of counter: ", counter)
 }
