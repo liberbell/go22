@@ -16,4 +16,9 @@ func main() {
 		counter++
 		fmt.Println("increment counter = ", counter)
 	}
+
+	dec := func() {
+		counter--
+		fmt.Println("decrement countter = ", counter)
+	}
 }
