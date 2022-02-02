@@ -11,8 +11,11 @@ func main() {
 
 	var counter int
 	var wg sync.WaitGroup
+	var mu sync.Mutex
 
 	inc := func() {
+		mu.Lock()
+
 		counter++
 		fmt.Println("increment counter = ", counter)
 	}
