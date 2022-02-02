@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-	"sync/atomic"
 )
 
 func main() {
@@ -27,10 +26,7 @@ func main() {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
-			for j := 0; j < 1000; j++ {
-				// counter++
-				atomic.AddUint64(&counter, 1)
-			}
+			inc()
 		}()
 	}
 	wg.Wait()
