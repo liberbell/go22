@@ -22,6 +22,9 @@ func main() {
 	}
 
 	dec := func() {
+		mu.Lock()
+		defer mu.Unlock()
+
 		counter--
 		fmt.Println("decrement counter = ", counter)
 	}
