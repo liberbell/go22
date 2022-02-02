@@ -11,6 +11,7 @@ func main() {
 
 	var counter uint64
 	var wg sync.WaitGroup
+	var mu sync.Mutex
 
 	inc := func() {
 		for i := 0; i < 1000; i++ {
