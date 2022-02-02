@@ -23,9 +23,9 @@ func main() {
 	}
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
-		go func()  {
+		go func() {
 			defer wg.Done()
 			dec()
-		}
+		}()
 	}
 }
