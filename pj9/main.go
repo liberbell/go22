@@ -15,6 +15,7 @@ func main() {
 
 	inc := func() {
 		mu.Lock()
+		defer mu.Unlock()
 
 		counter++
 		fmt.Println("increment counter = ", counter)
