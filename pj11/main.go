@@ -14,6 +14,8 @@ func main() {
 	var mu sync.Mutex
 
 	inc := func() {
+		mu.Lock()
+		defer mu.Unlock()
 		for i := 0; i < 1000; i++ {
 			counter++
 		}
