@@ -8,6 +8,7 @@ func main() {
 		res := x * y
 		ch <- res
 	}
+	go mult(10, 10)
 	val := <-ch
 	fmt.Printf("type of value of ch is: %T\n", ch)
 	fmt.Printf("the value of ch is: %v\n", ch)
