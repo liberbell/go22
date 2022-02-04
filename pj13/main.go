@@ -1,5 +1,13 @@
 package main
 
+import "fmt"
+
 func main() {
 	ch := make(chan int)
+	mult := func(x, y int) {
+		res := x * y
+		ch <- res
+	}
+	val := <-ch
+	fmt.Printf("type of value of ch is: %T\n", ch)
 }
