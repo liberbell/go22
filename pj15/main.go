@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -22,4 +23,9 @@ func main() {
 			fmt.Printf("RECV goroutine: %v\n", val)
 		}
 	}(ch)
+
+	fmt.Println("MAIN goroutine: sleeping!")
+	time.Sleep(time.Millisecond * 100)
+	val, ok := <-ch
+	fmt.Printf("values returned from the read operation 'val, ok := <-ch' are: %q, %v\n", val, ok)
 }
