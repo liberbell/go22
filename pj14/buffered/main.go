@@ -26,5 +26,8 @@ func send(ch chan string) {
 }
 
 func receive(ch chan string) {
-	time.Sleep(time.Second * 1)
+	for i := 0; i < 3; i++ {
+		fmt.Printf("received: %v\n", <-ch)
+		fmt.Printf("channel length: %v\n", len(ch))
+	}
 }
