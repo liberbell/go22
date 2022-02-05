@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 )
 
@@ -15,7 +16,10 @@ func main() {
 }
 
 func send(ch chan string) {
-	ch <- "message"
+	fmt.Printf("channel length before sending anything: %v\n", len(ch))
+	for i := 0; i < 4; i++ {
+		msg := "message" + strconv.Itoa(i)
+	}
 }
 
 func receive(ch chan string) {
