@@ -17,7 +17,7 @@ func main() {
 
 func send(ch chan string) {
 	fmt.Printf("channel length before sending anything: %v\n", len(ch))
-	for i := 0; i < 4; i++ {
+	for i := 1; i < 4; i++ {
 		msg := "message" + strconv.Itoa(i)
 		fmt.Printf("sending: %v\n", msg)
 		ch <- msg
