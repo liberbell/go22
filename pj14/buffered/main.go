@@ -9,8 +9,9 @@ func main() {
 	ch := make(chan string, 3)
 	go send(ch)
 	fmt.Println("\npress enter key to continue...")
-	fmt.Printf("channel length: %v\n", len(ch))
-	time.Sleep(time.Second * 2)
+	fmt.Scanln()
+	go receive(ch)
+	time.Sleep(time.Second * 1)
 }
 
 func send(ch chan string) {
