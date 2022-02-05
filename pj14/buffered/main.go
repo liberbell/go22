@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	ch := make(chan string)
+	ch := make(chan string, 3)
 	go send(ch)
-	fmt.Println("\nblocking and send goroutine...")
+	fmt.Println("\npress enter key to continue...")
 	fmt.Printf("channel length: %v\n", len(ch))
 	time.Sleep(time.Second * 2)
 }
