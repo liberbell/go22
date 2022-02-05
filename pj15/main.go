@@ -28,4 +28,5 @@ func main() {
 	time.Sleep(time.Millisecond * 100)
 	val, ok := <-ch
 	fmt.Printf("values returned from the read operation 'val, ok := <-ch' are: %q, %v\n", val, ok)
+	fmt.Println("MAIN goroutine: done!")
 }
