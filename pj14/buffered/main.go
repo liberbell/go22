@@ -14,5 +14,9 @@ func main() {
 }
 
 func send(ch chan string) {
+	ch <- "message"
+}
 
+func receive() {
+	time.Sleep(time.Second * 1)
 }
