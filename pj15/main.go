@@ -16,4 +16,10 @@ func main() {
 			fmt.Printf("SEND goroutine: %v\n", msg)
 		}
 	}(ch)
+
+	go func(ch chan string) {
+		for val := range ch {
+			fmt.Printf("RECV goroutine: %v\n", val)
+		}
+	}(ch)
 }
