@@ -1,6 +1,9 @@
 package main
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	ch := make(chan string, 2)
@@ -10,6 +13,7 @@ func main() {
 		for i := 0; i < 5; i++ {
 			msg := "message" + strconv.Itoa(i)
 			ch <- msg
+			fmt.Printf("SEND goroutine: %v\n", msg)
 		}
-	}()
+	}(ch)
 }
