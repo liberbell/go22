@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	ch1 := make(chan int)
@@ -14,4 +17,11 @@ func main() {
 			ch2 <- i
 		}
 	}()
+
+	for i := 1; i < 5; i++ {
+		select {
+		case val := <-ch1:
+			fmt.Printf("value received from channel ch1: %v\n", val)
+		}
+	}
 }
