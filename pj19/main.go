@@ -26,4 +26,5 @@ func square(in <-chan int) <-chan int {
 		}
 		close(out)
 	}()
+	return out
 }
