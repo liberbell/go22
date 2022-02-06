@@ -17,3 +17,7 @@ func gen(vals []int) <-chan int {
 	}()
 	return out
 }
+
+func square(in <-chan int) <-chan int {
+
+}
