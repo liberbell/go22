@@ -9,5 +9,16 @@ func main() {
 
 	go func() {
 		time.Sleep(1 * time.Second)
+		ch1 <- 1
+	}()
+
+	go func() {
+		time.Sleep(2 * time.Second)
+		ch2 <- 2
+	}()
+
+	go func() {
+		time.Sleep(3 * time.Second)
+		ch3 <- 3ß
 	}()
 }
