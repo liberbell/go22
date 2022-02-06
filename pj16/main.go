@@ -33,6 +33,8 @@ func main() {
 			fmt.Printf("value received from ch2: %v\n", val2)
 		case val3 := <-ch3:
 			fmt.Printf("value received from ch3: %v\n", val3)
+		case to := <-time.After(5 * time.Second):
+			fmt.Printf("timed out after 5 seconds at %v\n", to)
 		}
 	}
 }
