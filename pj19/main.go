@@ -15,4 +15,5 @@ func gen(vals []int) <-chan int {
 		}
 		close(out)
 	}()
+	return out
 }
