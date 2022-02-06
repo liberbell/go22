@@ -7,6 +7,6 @@ func main() {
 	fo1 := square(in)
 }
 
-func gen() {
-
+func gen(vals []int) <-chan int {
+	out := make(chan int)
 }
