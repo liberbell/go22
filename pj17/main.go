@@ -22,6 +22,8 @@ func main() {
 		select {
 		case val := <-ch1:
 			fmt.Printf("value received from channel ch1: %v\n", val)
+		case val := <-ch2:
+			fmt.Printf("value received from channel ch2: %v\n", val)
 		}
 	}
 }
