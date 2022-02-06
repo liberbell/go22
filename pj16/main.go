@@ -19,6 +19,10 @@ func main() {
 
 	go func() {
 		time.Sleep(3 * time.Second)
-		ch3 <- 3ß
+		ch3 <- 3
 	}()
+	
+	for i := 0; i < 3; i++ {
+		select
+	}
 }
