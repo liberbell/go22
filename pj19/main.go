@@ -9,4 +9,10 @@ func main() {
 
 func gen(vals []int) <-chan int {
 	out := make(chan int)
+	go func() {
+		for _, val := range vals {
+			out <- val
+		}
+		close(out)
+	}()
 }
