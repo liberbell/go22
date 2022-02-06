@@ -11,6 +11,7 @@ func main() {
 			time.Sleep(3 * time.Second)
 			ch1 <- i
 			time.Sleep(1 * time.Second)
+			ch2 <- i
 		}
 	}()
 }
