@@ -22,4 +22,9 @@ func main() {
 		defer wg.Done()
 		ch <- 2
 	}()
+
+	go func() {
+		defer wg.Done()
+		ch <- 3
+	}()
 }
