@@ -25,5 +25,6 @@ func main() {
 		case val := <-ch2:
 			fmt.Printf("value received from channel ch2: %v\n", val)
 		}
+		time.Sleep(2 * time.Second)
 	}
 }
