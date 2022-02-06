@@ -1,6 +1,9 @@
 package main
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+)
 
 func main() {
 	var wg sync.WaitGroup
@@ -27,4 +30,11 @@ func main() {
 		defer wg.Done()
 		ch <- 3
 	}()
+
+	wg.Wait()
+	for val := range ch {
+		fmt.Printf("value received: %v\n", val)
+	}
+	val, ok := <-ch
+	fmt.Println(val, ok)
 }
