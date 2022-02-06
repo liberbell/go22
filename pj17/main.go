@@ -24,6 +24,8 @@ func main() {
 			fmt.Printf("value received from channel ch1: %v\n", val)
 		case val := <-ch2:
 			fmt.Printf("value received from channel ch2: %v\n", val)
+		default:
+			fmt.Println("no data received... performing some other operation")
 		}
 		time.Sleep(2 * time.Second)
 	}
