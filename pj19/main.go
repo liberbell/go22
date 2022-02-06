@@ -28,3 +28,7 @@ func square(in <-chan int) <-chan int {
 	}()
 	return out
 }
+
+func merge(fo ...<-chan int) <-chan int {
+
+}
