@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	ch1 := make(chan int)
@@ -21,8 +24,11 @@ func main() {
 		time.Sleep(3 * time.Second)
 		ch3 <- 3
 	}()
-	
+
 	for i := 0; i < 3; i++ {
-		select
+		select {
+		case val1 := <-ch1:
+			fmt.Printf("value received from ch1: %v\n", val1)
+		}
 	}
 }
