@@ -15,5 +15,11 @@ func main() {
 
 	go func() {
 		defer wg.Done()
+		ch <- 1
+	}()
+
+	go func() {
+		defer wg.Done()
+		ch <- 2
 	}()
 }
