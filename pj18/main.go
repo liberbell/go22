@@ -31,7 +31,7 @@ func main() {
 		ch <- 3
 	}()
 
-	wg.Wait()
+	// wg.Wait()
 	for val := range ch {
 		fmt.Printf("value received: %v\n", val)
 	}
