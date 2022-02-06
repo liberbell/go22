@@ -19,5 +19,11 @@ func gen(vals []int) <-chan int {
 }
 
 func square(in <-chan int) <-chan int {
-
+	out := make(chan int)
+	go func() {
+		for val := range in {
+			out <- val * val
+		}
+		close(out)
+	}()
 }
