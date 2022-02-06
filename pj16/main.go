@@ -31,6 +31,8 @@ func main() {
 			fmt.Printf("value received from ch1: %v\n", val1)
 		case val2 := <-ch2:
 			fmt.Printf("value received from ch2: %v\n", val2)
+		case val3 := <-ch3:
+			fmt.Printf("value received from ch3: %v\n", val3)
 		}
 	}
 }
