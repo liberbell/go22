@@ -11,7 +11,7 @@ func main() {
 	ch3 := make(chan int)
 
 	go func() {
-		time.Sleep(1 * time.Second)
+		time.Sleep(2 * time.Second)
 		ch1 <- 1
 	}()
 
