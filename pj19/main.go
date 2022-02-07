@@ -44,4 +44,10 @@ func merge(fo ...<-chan int) <-chan int {
 	for _, ch := range fo {
 		go fi(ch)
 	}
+
+	go func() {
+		wg.Wait()
+		close(out)
+	}()
+	return out
 }
