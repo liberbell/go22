@@ -40,4 +40,5 @@ func merge(fo ...<-chan int) <-chan int {
 			out <- val
 		}
 	}
+	wg.Add(len(fo))
 }
