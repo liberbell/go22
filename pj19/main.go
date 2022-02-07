@@ -34,4 +34,10 @@ func square(in <-chan int) <-chan int {
 func merge(fo ...<-chan int) <-chan int {
 	out := make(chan int)
 	var wg sync.WaitGroup
+
+	fi := func(ch <-chan int) {
+		for val := range ch {
+			out <- val
+		}
+	}
 }
