@@ -48,6 +48,7 @@ func merge(fo ...<-chan int) <-chan int {
 		for val := range ch {
 			out <- val
 		}
+		wg.Done()
 	}
 	wg.Add(len(fo))
 	for _, ch := range fo {
