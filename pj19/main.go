@@ -1,5 +1,7 @@
 package main
 
+import "sync"
+
 func main() {
 	vals := []int{100, 50, 20, 90}
 	in := gen(vals)
@@ -30,5 +32,6 @@ func square(in <-chan int) <-chan int {
 }
 
 func merge(fo ...<-chan int) <-chan int {
-
+	out := make(chan int)
+	var wg sync.WaitGroup
 }
