@@ -1,12 +1,21 @@
 package main
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+)
 
 func main() {
 	vals := []int{100, 50, 20, 90}
 	in := gen(vals)
 
 	fo1 := square(in)
+	fo2 := square(in)
+
+	fi := merge(fo1, fo2)
+	for res := range fi {
+		fmt.Println(res)
+	}
 }
 
 func gen(vals []int) <-chan int {
