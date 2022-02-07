@@ -41,4 +41,7 @@ func merge(fo ...<-chan int) <-chan int {
 		}
 	}
 	wg.Add(len(fo))
+	for _, ch := range fo {
+		go fi(ch)
+	}
 }
